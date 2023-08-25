@@ -13,6 +13,7 @@ while 조건식 :
 '''
 
 n = int(input())
-while n == 0:
+n = n-1
+while n != -1:
     print(n)
     n = n-1

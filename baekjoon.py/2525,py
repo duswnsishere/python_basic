@@ -1,0 +1,18 @@
+a, b = input().split()
+c = input()
+a = int(a)
+b = int(b)
+c = int(c)
+
+if c>=60:
+    share = c//60      # c를 60 으로 나눈 몫
+    remain = c%60      # c를 60으로 나눈 나머지
+    if b + remain >= 60:
+        final_remain = (b + remain) % 60    # 최종 나머지
+        final_share = ((b + remain) // 60) + share    # 추가된 몫 + 원래 몫
+        if final_share >= 24:
+            final_share = final_share-24
+        print(f'{a + final_share} {final_remain}')
+    else:
+        print(f'{a + share} {b + remain}')
+    
